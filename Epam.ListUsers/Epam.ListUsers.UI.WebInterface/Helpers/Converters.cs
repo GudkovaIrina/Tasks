@@ -76,14 +76,6 @@ namespace Epam.ListUsers.UI.WebInterface.Helpers
             return awardModel;
         }
 
-        //public static AwardModelForDetails ToAwardModelForDetails(Award award)
-        //{
-        //    var awardModel = new AwardModelForDetails();
-        //    awardModel.Id = award.Id;
-        //    awardModel.Title = award.Title;
-        //    return awardModel;
-        //}
-
         public static Award ToAwardForLogic(AwardModel awardModel)
         {
             var award = new Award(awardModel.Title) { Id = awardModel.Id};

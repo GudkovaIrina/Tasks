@@ -91,6 +91,11 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -118,7 +123,6 @@
     </Compile>
     <Compile Include="Helpers\Converters.cs" />
     <Compile Include="Models\AwardModel.cs" />
-    <Compile Include="Models\AwardModelForDetails.cs" />
     <Compile Include="Models\AwardModelForDetailsAndReAward.cs" />
     <Compile Include="Models\AwardsModelForToAward.cs" />
     <Compile Include="Models\UserModelForCreate.cs" />
