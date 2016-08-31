@@ -10,5 +10,7 @@ namespace Epam.ListUsers.UI.WebInterface.Models
         public Guid Id { get; set; }
 
         public String Title { get; set; }
+
+        public List<String> Users { get; set; }
     }
 }

@@ -26,7 +26,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         public ActionResult Details(Guid id)
         {
             var award = _logic.GetAwardById(id);
-            var model = Converters.ToAwardModelForDetails(award);
+            var model = Converters.ToAwardModel(award);
             model.Users = _logic.GetAllUsersWithAward(award).Select(u => u.Name).ToList();
             return View(model);
         }
