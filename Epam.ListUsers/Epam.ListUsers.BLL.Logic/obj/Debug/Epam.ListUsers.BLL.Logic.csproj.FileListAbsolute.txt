@@ -1,0 +1,13 @@
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.BLL.Logic.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.BLL.Logic.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.DAL.Abstract.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.DAL.Fake.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.Entities.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.DAL.Abstract.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.DAL.Fake.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.Entities.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\obj\Debug\Epam.ListUsers.BLL.Logic.csprojResolveAssemblyReference.cache
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\obj\Debug\Epam.ListUsers.BLL.Logic.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\obj\Debug\Epam.ListUsers.BLL.Logic.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.DAL.XMLFiles.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.DAL.XMLFiles.pdb

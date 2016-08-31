@@ -1,0 +1,61 @@
+﻿@model Epam.ListUsers.UI.WebInterface.Models.UserModelForDetails
+
+@{
+    ViewBag.Title = "Пользователи";
+}
+
+<h2>Удаление пользователя</h2>
+
+<h3>Вы уверены, что хотите удалить данного пользователя?</h3>
+<div>
+    <h4>Пользователь</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <span>Фамилия Имя</span>
+        </dt>
+
+        <dd>
+            <p class="data"><em>@Model.Name</em></p>
+        </dd>
+
+        <dt>
+            <span>Дата рождения</span>
+        </dt>
+
+        <dd>
+            <p class="data"><em>@Model.DateOfBirth</em></p>
+        </dd>
+
+        <dt>
+            <span>Возраст</span>
+        </dt>
+
+        <dd>
+            <p class="data"><em>@Model.Age</em></p>
+        </dd>
+
+        @if (Model.Awards != null && Model.Awards.Count != 0)
+        {
+            <dt>
+                <span>Награды</span>
+            </dt>
+
+            <dd>
+                @foreach (var award in Model.Awards)
+                {
+                    <p class="data"><em>@award</em></p>
+                }
+            </dd>
+        }
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Назад к списку", "Index")
+        </div>
+    }
+</div>

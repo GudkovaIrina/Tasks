@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Epam.ListUsers.UI.WebInterface.Models.AwardModel>
+
+@{
+    ViewBag.Title = "Награды";
+}
+
+<h2>Награды</h2>
+
+<p>
+    @Html.ActionLink("Создать новую", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <span>Название награды</span>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <p class="data"><em>@item.Title</em></p>
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Посмотреть", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+@Html.ActionLink("На главную страницу", "Index", "Home", null, new { @class = "btn btn-default" })

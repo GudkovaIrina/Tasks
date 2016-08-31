@@ -1,0 +1,6 @@
+D:\epam\Ira\new\BasicOOP1\BasicOOP8\obj\Debug\BasicOOP8.csprojResolveAssemblyReference.cache
+D:\epam\Ira\new\BasicOOP1\BasicOOP8\bin\Debug\BasicOOP8.exe.config
+D:\epam\Ira\new\BasicOOP1\BasicOOP8\bin\Debug\BasicOOP8.exe
+D:\epam\Ira\new\BasicOOP1\BasicOOP8\bin\Debug\BasicOOP8.pdb
+D:\epam\Ira\new\BasicOOP1\BasicOOP8\obj\Debug\BasicOOP8.exe
+D:\epam\Ira\new\BasicOOP1\BasicOOP8\obj\Debug\BasicOOP8.pdb

@@ -1,0 +1,6 @@
+D:\epam\Ira\new\BasicOOP1\ExtendedCSharp2\bin\Debug\ExtendedCSharp2.exe.config
+D:\epam\Ira\new\BasicOOP1\ExtendedCSharp2\bin\Debug\ExtendedCSharp2.exe
+D:\epam\Ira\new\BasicOOP1\ExtendedCSharp2\bin\Debug\ExtendedCSharp2.pdb
+D:\epam\Ira\new\BasicOOP1\ExtendedCSharp2\obj\Debug\ExtendedCSharp2.csprojResolveAssemblyReference.cache
+D:\epam\Ira\new\BasicOOP1\ExtendedCSharp2\obj\Debug\ExtendedCSharp2.exe
+D:\epam\Ira\new\BasicOOP1\ExtendedCSharp2\obj\Debug\ExtendedCSharp2.pdb

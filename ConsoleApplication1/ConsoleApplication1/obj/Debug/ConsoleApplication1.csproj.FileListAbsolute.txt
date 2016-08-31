@@ -1,0 +1,6 @@
+D:\epam\Ira\new\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\epam\Ira\new\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\epam\Ira\new\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\epam\Ira\new\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\epam\Ira\new\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\epam\Ira\new\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

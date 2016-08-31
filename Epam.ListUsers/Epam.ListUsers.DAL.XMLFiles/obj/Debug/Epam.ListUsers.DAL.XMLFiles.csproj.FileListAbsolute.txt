@@ -1,0 +1,9 @@
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.XMLFiles\obj\Debug\Epam.ListUsers.DAL.XMLFiles.csprojResolveAssemblyReference.cache
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.XMLFiles\bin\Debug\Epam.ListUsers.DAL.XMLFiles.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.XMLFiles\bin\Debug\Epam.ListUsers.DAL.XMLFiles.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.XMLFiles\bin\Debug\Epam.ListUsers.DAL.Abstract.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.XMLFiles\bin\Debug\Epam.ListUsers.Entities.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.XMLFiles\bin\Debug\Epam.ListUsers.DAL.Abstract.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.XMLFiles\bin\Debug\Epam.ListUsers.Entities.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.XMLFiles\obj\Debug\Epam.ListUsers.DAL.XMLFiles.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.XMLFiles\obj\Debug\Epam.ListUsers.DAL.XMLFiles.pdb

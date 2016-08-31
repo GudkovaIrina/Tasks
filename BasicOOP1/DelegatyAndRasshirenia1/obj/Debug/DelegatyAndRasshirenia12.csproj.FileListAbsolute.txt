@@ -1,0 +1,3 @@
+D:\epam\Ira\new\BasicOOP1\DelegatyAndRasshirenia1\bin\Debug\DelegatyAndRasshirenia1.exe.config
+D:\epam\Ira\new\BasicOOP1\DelegatyAndRasshirenia1\obj\Debug\DelegatyAndRasshirenia1.exe
+D:\epam\Ira\new\BasicOOP1\DelegatyAndRasshirenia1\obj\Debug\DelegatyAndRasshirenia1.pdb

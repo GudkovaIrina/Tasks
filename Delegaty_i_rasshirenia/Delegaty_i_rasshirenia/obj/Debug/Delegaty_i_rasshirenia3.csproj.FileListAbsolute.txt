@@ -1,0 +1,6 @@
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia\bin\Debug\Delegaty_i_rasshirenia.exe.config
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia\bin\Debug\Delegaty_i_rasshirenia.exe
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia\bin\Debug\Delegaty_i_rasshirenia.pdb
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia\obj\Debug\Delegaty_i_rasshirenia.exe
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia\obj\Debug\Delegaty_i_rasshirenia.pdb
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia\obj\Debug\Delegaty_i_rasshirenia3.csprojResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.UI.ConsoleInterface.exe.config
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.UI.ConsoleInterface.exe
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.UI.ConsoleInterface.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\obj\Debug\Epam.ListUsers.UI.ConsoleInterface.exe
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\obj\Debug\Epam.ListUsers.UI.ConsoleInterface.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.BLL.Logic.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.Entities.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.DAL.Abstract.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.BLL.Logic.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.Entities.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.DAL.Abstract.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\obj\Debug\Epam.ListUsers.UI.ConsoleInterface.csprojResolveAssemblyReference.cache
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.DAL.XMLFiles.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.DAL.XMLFiles.pdb

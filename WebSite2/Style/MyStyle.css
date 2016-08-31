@@ -1,0 +1,19 @@
+﻿.hide {
+    display : none;
+}
+img {
+    height : 500px;
+    width : 400px;
+}
+.timer {
+    display : block;
+    margin-top: 20px;
+}
+.progress {
+    display : block;
+}
+.container {
+    display:block;
+    float:left;
+    width:400px;
+}

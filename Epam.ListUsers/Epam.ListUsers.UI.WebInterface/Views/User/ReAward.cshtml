@@ -1,0 +1,32 @@
+﻿@model Epam.ListUsers.UI.WebInterface.Models.AwardModelForDetailsAndReAward
+
+@{
+    ViewBag.Title = "Пользователи";
+}
+
+<h2>Удаление награды пользователя @Model.NameUser</h2>
+
+<h3>Вы уверены, что хотите удалить данную награду у пользователя?</h3>
+<div>
+    <h4>Награда</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <span>Название награды</span>
+        </dt>
+
+        <dd>
+            <p class="data"><em>@Model.Title</em></p>
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Назад к пользователю", "Edit", new { id = Model.IdUser })
+        </div>
+    }
+</div>

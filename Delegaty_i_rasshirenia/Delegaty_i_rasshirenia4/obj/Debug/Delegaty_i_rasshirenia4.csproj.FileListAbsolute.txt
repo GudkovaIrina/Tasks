@@ -1,0 +1,5 @@
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia4\bin\Debug\Delegaty_i_rasshirenia4.exe.config
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia4\bin\Debug\Delegaty_i_rasshirenia4.exe
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia4\bin\Debug\Delegaty_i_rasshirenia4.pdb
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia4\obj\Debug\Delegaty_i_rasshirenia4.exe
+D:\epam\Ira\new\Delegaty_i_rasshirenia\Delegaty_i_rasshirenia4\obj\Debug\Delegaty_i_rasshirenia4.pdb

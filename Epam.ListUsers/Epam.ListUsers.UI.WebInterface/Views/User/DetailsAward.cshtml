@@ -1,0 +1,24 @@
+﻿@model Epam.ListUsers.UI.WebInterface.Models.AwardModelForDetailsAndReAward
+
+@{
+    ViewBag.Title = "Пользователи";
+}
+
+<h2>Просмотр награды пользователя @Model.NameUser</h2>
+
+<div>
+    <h4>Награда</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <span>Название награды</span>
+        </dt>
+
+        <dd>
+            <p class="data"><em>@Model.Title</em></p>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Назад к пользователю", "Edit", new { id = Model.IdUser })
+</p>

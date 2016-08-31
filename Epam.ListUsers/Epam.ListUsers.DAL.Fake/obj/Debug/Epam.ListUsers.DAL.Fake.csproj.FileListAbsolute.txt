@@ -1,0 +1,9 @@
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.Fake\bin\Debug\Epam.ListUsers.DAL.Fake.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.Fake\bin\Debug\Epam.ListUsers.DAL.Fake.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.Fake\bin\Debug\Epam.ListUsers.Entities.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.Fake\bin\Debug\Epam.ListUsers.Entities.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.Fake\obj\Debug\Epam.ListUsers.DAL.Fake.csprojResolveAssemblyReference.cache
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.Fake\obj\Debug\Epam.ListUsers.DAL.Fake.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.Fake\obj\Debug\Epam.ListUsers.DAL.Fake.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.Fake\bin\Debug\Epam.ListUsers.DAL.Abstract.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.Fake\bin\Debug\Epam.ListUsers.DAL.Abstract.pdb

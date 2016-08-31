@@ -1,0 +1,56 @@
+﻿@model Epam.ListUsers.UI.WebInterface.Models.UserModelForDetails
+
+@{
+    ViewBag.Title = "Пользователи";
+}
+
+<h2>Просмотр</h2>
+
+<div>
+    <h4>Пользователь</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <span>Фамилия Имя</span>
+        </dt>
+
+        <dd>
+            <p class="data"><em>@Model.Name</em></p>
+        </dd>
+
+        <dt>
+            <span>Дата рождения</span>
+        </dt>
+
+        <dd>
+            <p class="data"><em>@Model.DateOfBirth</em></p>
+        </dd>
+
+        <dt>
+            <span>Возраст</span>
+        </dt>
+
+        <dd>
+            <p class="data"><em>@Model.Age</em></p>
+        </dd>
+
+        @if (Model.Awards.Count != 0)
+        {
+            <dt>
+                <span>Награды</span>
+            </dt>
+
+            <dd>
+                @foreach (var award in Model.Awards)
+                {
+                    <p class="data"><em>@award</em></p>
+                }
+            </dd>
+        }
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Назад к списку", "Index")
+</p>
