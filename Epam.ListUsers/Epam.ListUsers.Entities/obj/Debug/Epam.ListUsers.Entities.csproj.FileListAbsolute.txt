@@ -2,4 +2,3 @@ D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.Entities\bin\Debug\Epam.ListUsers.
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.Entities\bin\Debug\Epam.ListUsers.Entities.pdb
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.Entities\obj\Debug\Epam.ListUsers.Entities.dll
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.Entities\obj\Debug\Epam.ListUsers.Entities.pdb
-D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.Entities\obj\Debug\Epam.ListUsers.Entities.csprojResolveAssemblyReference.cache

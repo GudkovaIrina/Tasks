@@ -15,9 +15,15 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         private UsersLogic _logic = new UsersLogic();
 
         // GET: User
-        public ActionResult Index()
+        public ActionResult Index(Guid? Id)
         {
             var model = _logic.GetAllUsers().Select(u => Converters.ToUserModelForDetails(u));
+
+            if (Id.HasValue)
+            {
+                ViewBag.ConfirmedUser = Converters.ToUserModelForDetails(_logic.GetUserById(Id.Value));
+            }
+
             return View(model);
         }
 
@@ -136,33 +142,48 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         // GET: User/Delete/5
         public ActionResult Delete(Guid id)
         {
-            var model = Converters.ToUserModelForDetails(_logic.GetUserById(id));
-            return View(model);
-        }
-
-        // POST: User/Delete/5
-        [HttpPost]
-        public ActionResult Delete(UserModelForDetails model)
-        {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) 
             {
                 try
                 {
                     // TODO: Add delete logic here
-                    var user = _logic.GetUserById(model.Id);
+                    var user = _logic.GetUserById(id);
                     _logic.RemoveUser(user);
                     return RedirectToAction("Index");
                 }
                 catch
                 {
-                    return View(model);
+                    return View();
                 }
             }
-            else
-            {
-                return View(model);
-            }
+            return View();
+            //var model = Converters.ToUserModelForDetails(_logic.GetUserById(id));
+            //return View(model);
         }
+
+        //// POST: User/Delete/5
+        //[HttpPost]
+        //public ActionResult Delete(UserModelForDetails model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            // TODO: Add delete logic here
+        //            var user = _logic.GetUserById(model.Id);
+        //            _logic.RemoveUser(user);
+        //            return RedirectToAction("Index");
+        //        }
+        //        catch
+        //        {
+        //            return View(model);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return View(model);
+        //    }
+        //}
 
         public ActionResult ToAward(Guid idUser)
         {
@@ -185,6 +206,11 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
                 return View();
             }
             return RedirectToAction("Edit", new { id = idUser });
+        }
+
+        public ActionResult ModalWindow(UserModelForDetails user)
+        {
+            return PartialView(user);
         }
     }
 }

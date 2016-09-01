@@ -1,7 +1,10 @@
-﻿@model IEnumerable<Epam.ListUsers.UI.WebInterface.Models.UserModelForDetails>
+﻿@using Epam.ListUsers.UI.WebInterface.Models;
+@model IEnumerable<UserModelForDetails>
 
 @{
     ViewBag.Title = "Пользователи";
+    UserModelForDetails confirmingUser = ViewBag.ConfirmedUser;
+    //var confirmingUser = (UserModelForDetails)ViewBag.ConfirmedUser;
 }
 
 <h2>Пользователи</h2>
@@ -31,10 +34,18 @@
         <td>
             @Html.ActionLink("Редактировать", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Посмотреть", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Удалить", "Delete", new { id=item.Id })
+            @Html.ActionLink("Удалить", "Index", new { id = item.Id })
         </td>
     </tr>
 }
 
 </table>
 @Html.ActionLink("На главную страницу", "Index", "Home", null, new { @class = "btn btn-default" })
+
+@if (confirmingUser != null)
+{
+    @Html.Partial("ModalWindow", confirmingUser)
+    @section scripts{
+        <script src="~/Scripts/ControlModalWindow.js"></script>
+    }
+}
