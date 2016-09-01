@@ -1,0 +1,20 @@
+﻿@model Epam.ListUsers.UI.WebInterface.Models.AwardModel
+
+<div class="modal fade lu-modal" id="modal-message" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Подтверждение</h4>
+            </div>
+            <div class="modal-body">
+                <h3>Вы уверены, что хотите удалить награду @Model.Title ?</h3>
+            </div>
+            <div class="modal-footer">
+                @Html.ActionLink("Ok", "Delete", new { id = Model.Id }, new { @class = "btn btn-primary" })
+                @*<button id="btnOk" class="btn btn-primary" type="button" data-dismiss="modal">Ok</button>*@
+                <button id="btnCansel" class="btn btn-default" type="button" data-dismiss="modal">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>

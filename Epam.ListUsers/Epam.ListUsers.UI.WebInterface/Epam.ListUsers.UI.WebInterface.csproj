@@ -105,16 +105,15 @@
     <Content Include="Views\User\Details.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
-    <Content Include="Views\User\Delete.cshtml" />
     <Content Include="Views\User\DetailsAward.cshtml" />
-    <Content Include="Views\User\ReAward.cshtml" />
     <Content Include="Views\User\ToAward.cshtml" />
     <Content Include="Views\Award\Index.cshtml" />
     <Content Include="Views\Award\Details.cshtml" />
     <Content Include="Views\Award\Create.cshtml" />
     <Content Include="Views\Award\Edit.cshtml" />
-    <Content Include="Views\Award\Delete.cshtml" />
-    <Content Include="Views\User\ModalWindow.cshtml" />
+    <Content Include="Views\User\ModalWindowToDeleteUser.cshtml" />
+    <Content Include="Views\User\ModalWindowToDeleteAwardAtUser.cshtml" />
+    <Content Include="Views\Award\ModalWindowToDeleteAward.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />

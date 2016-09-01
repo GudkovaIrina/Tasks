@@ -16,9 +16,14 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         private UsersLogic _logic = new UsersLogic();
         
         // GET: Award
-        public ActionResult Index()
+        public ActionResult Index(Guid? id)
         {
             var model = _logic.GetAllAwards().Select(a => Converters.ToAwardModel(a));
+
+            if (id.HasValue)
+            {
+                ViewBag.ConfirmedAward = Converters.ToAwardModel(_logic.GetAwardById(id.Value));
+            }
             return View(model);
         }
 
@@ -98,32 +103,9 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         // GET: Award/Delete/5
         public ActionResult Delete(Guid id)
         {
-            var model = Converters.ToAwardModel(_logic.GetAwardById(id));
-            return View(model);
-        }
-
-        // POST: Award/Delete/5
-        [HttpPost]
-        public ActionResult Delete(AwardModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    // TODO: Add delete logic here
-                    var award = _logic.GetAwardById(model.Id);
-                    _logic.RemoveAward(award);
-                    return RedirectToAction("Index");
-                }
-                catch
-                {
-                    return View(model);
-                }
-            }
-            else
-            {
-                return View(model);
-            }
+            var award = _logic.GetAwardById(id);
+            _logic.RemoveAward(award);
+            return RedirectToAction("Index");
         }
     }
 }

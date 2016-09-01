@@ -4,7 +4,6 @@
 @{
     ViewBag.Title = "Пользователи";
     UserModelForDetails confirmingUser = ViewBag.ConfirmedUser;
-    //var confirmingUser = (UserModelForDetails)ViewBag.ConfirmedUser;
 }
 
 <h2>Пользователи</h2>
@@ -44,7 +43,7 @@
 
 @if (confirmingUser != null)
 {
-    @Html.Partial("ModalWindow", confirmingUser)
+    @Html.Partial("ModalWindowToDeleteUser", confirmingUser)
     @section scripts{
         <script src="~/Scripts/ControlModalWindow.js"></script>
     }

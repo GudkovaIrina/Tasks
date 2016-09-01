@@ -1,7 +1,9 @@
-﻿@model IEnumerable<Epam.ListUsers.UI.WebInterface.Models.AwardModel>
+﻿@using Epam.ListUsers.UI.WebInterface.Models
+@model IEnumerable<AwardModel>
 
 @{
     ViewBag.Title = "Награды";
+    AwardModel confirmedAward = ViewBag.ConfirmedAward;
 }
 
 <h2>Награды</h2>
@@ -25,10 +27,18 @@
         <td>
             @Html.ActionLink("Редактировать", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Посмотреть", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Удалить", "Delete", new { id=item.Id })
+            @Html.ActionLink("Удалить", "Index", new { id=item.Id })
         </td>
     </tr>
 }
 
 </table>
 @Html.ActionLink("На главную страницу", "Index", "Home", null, new { @class = "btn btn-default" })
+
+@if (confirmedAward != null)
+{
+    @Html.Partial("ModalWindowToDeleteAward", confirmedAward);
+    @section scripts{
+        <script src="~/Scripts/ControlModalWindow.js"></script>
+    }
+}
