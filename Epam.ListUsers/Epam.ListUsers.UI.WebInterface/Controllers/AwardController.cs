@@ -16,14 +16,9 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         private UsersLogic _logic = new UsersLogic();
         
         // GET: Award
-        public ActionResult Index(Guid? id)
+        public ActionResult Index()
         {
             var model = _logic.GetAllAwards().Select(a => Converters.ToAwardModel(a));
-
-            if (id.HasValue)
-            {
-                ViewBag.ConfirmedAward = Converters.ToAwardModel(_logic.GetAwardById(id.Value));
-            }
             return View(model);
         }
 

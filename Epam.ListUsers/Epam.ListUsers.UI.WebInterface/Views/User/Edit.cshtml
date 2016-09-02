@@ -3,7 +3,6 @@
 
 @{
     ViewBag.Title = "Пользователи";
-    AwardModelForDetailsAndReAward confirmedAward = ViewBag.ConfirmedAward;
 }
 
 <h2>Редактирование пользователя</h2>
@@ -51,7 +50,7 @@
                     </td>
                     <td>
                         @Html.ActionLink("Посмотреть", "DetailsAward", new { idUser = Model.Id, idAward = item.Id }) |
-                        @Html.ActionLink("Удалить", "Edit", new { id = Model.Id, idAward = item.Id })
+                        <a class="delete" data-id-user="@Model.Id" data-id-award="@item.Id" data-message="Вы уверены что хотите удалить награду @item.Title у пользователя @Model.Name?">Удалить</a>
                     </td>
                 </tr>
             }
@@ -72,16 +71,14 @@
     @Html.ActionLink("Назад к списку", "Index")
 </div>
 
-@if (confirmedAward != null)
-{
-    @Html.Partial("ModalWindowToDeleteAwardAtUser", confirmedAward)
-}
+<form name="id" action="/User/ReAward" method="post">
+    <input class="hidden" name="idUser"/>
+    <input class="hidden" name="idAward"/>
+</form>
 
+@Html.Partial("ModalWindow")
 @section scripts{
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-    @if (confirmedAward != null)
-    {
-        <script src="~/Scripts/ControlModalWindow.js"></script>
-    }
+    <script src="~/Scripts/ControlModalWindow.js"></script>
 }

@@ -111,9 +111,7 @@
     <Content Include="Views\Award\Details.cshtml" />
     <Content Include="Views\Award\Create.cshtml" />
     <Content Include="Views\Award\Edit.cshtml" />
-    <Content Include="Views\User\ModalWindowToDeleteUser.cshtml" />
-    <Content Include="Views\User\ModalWindowToDeleteAwardAtUser.cshtml" />
-    <Content Include="Views\Award\ModalWindowToDeleteAward.cshtml" />
+    <Content Include="Views\Shared\ModalWindow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />

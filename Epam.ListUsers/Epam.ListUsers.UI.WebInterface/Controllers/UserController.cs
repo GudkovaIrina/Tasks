@@ -15,15 +15,9 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         private UsersLogic _logic = new UsersLogic();
 
         // GET: User
-        public ActionResult Index(Guid? Id)
+        public ActionResult Index()
         {
             var model = _logic.GetAllUsers().Select(u => Converters.ToUserModelForDetails(u));
-
-            if (Id.HasValue)
-            {
-                ViewBag.ConfirmedUser = Converters.ToUserModelForDetails(_logic.GetUserById(Id.Value));
-            }
-
             return View(model);
         }
 
@@ -66,16 +60,11 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
         // GET: User/Edit/5
-        public ActionResult Edit(Guid id, Guid? idAward)
+        public ActionResult Edit(Guid id)
         {
             User user = _logic.GetUserById(id);
             var model = Converters.ToUserModelForEdit(user);
-            if (idAward.HasValue)
-            {
-                ViewBag.ConfirmedAward = Converters.ToAwardModelForDetails(_logic.GetAwardById(idAward.Value),
-                                                                           _logic.GetUserById(id));
-            }
-
+            
             return View(model);
         }
 
