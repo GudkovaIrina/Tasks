@@ -10,6 +10,15 @@
     <h4>Пользователь</h4>
     <hr />
     <dl class="dl-horizontal">
+
+        <dt>
+            <span>Фотография</span>
+        </dt>
+
+        <dd>
+            <img src="@Url.Action("Get", new { id = @Model.Id })"/>
+        </dd>
+
         <dt>
             <span>Фамилия Имя</span>
         </dt>

@@ -4,6 +4,7 @@ using Epam.ListUsers.UI.WebInterface.Helpers;
 using Epam.ListUsers.UI.WebInterface.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
@@ -14,6 +15,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
     public class AwardController : Controller
     {
         private UsersLogic _logic = new UsersLogic();
+        private string PuthToDefaultImageForAwards = ConfigurationManager.AppSettings["PathForDefaultImageOfAwards"];
         
         // GET: Award
         public ActionResult Index()
@@ -39,7 +41,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
 
         // POST: Award/Create
         [HttpPost]
-        public ActionResult Create(AwardModel model)
+        public ActionResult Create(AwardModel model, HttpPostedFileBase uploadedFile)
         {
             if (ModelState.IsValid)
             {
@@ -49,6 +51,11 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
                     model.Id = Guid.NewGuid();
                     Award award = Converters.ToAwardForLogic(model);
                     _logic.AddAward(award);
+                    if (uploadedFile != null)
+                    {
+                        _logic.SetImageOfAward(model.Id, uploadedFile);
+                    }
+                    
                     return RedirectToAction("Index");
                 }
                 catch
@@ -73,7 +80,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
 
         // POST: Award/Edit/5
         [HttpPost]
-        public ActionResult Edit(AwardModel model)
+        public ActionResult Edit(AwardModel model, HttpPostedFileBase uploadedFile)
         {
             if (ModelState.IsValid)
             {
@@ -82,6 +89,11 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
                     // TODO: Add update logic here
                     var award = Converters.ToAwardForLogic(model);
                     _logic.EditAward(award);
+                    if (uploadedFile != null)
+                    {
+                        _logic.SetImageOfAward(model.Id, uploadedFile);
+                    }
+                    
                     return RedirectToAction("Index");
                 }
                 catch
@@ -101,6 +113,19 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
             var award = _logic.GetAwardById(id);
             _logic.RemoveAward(award);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Get(Guid? id)
+        {
+            if (id.HasValue)
+            {
+                return File(_logic.GetImageOfAward(id.Value), "image/jpeg");
+            }
+            else
+            {
+                var imageDefault = System.IO.File.ReadAllBytes(PuthToDefaultImageForAwards);
+                return File(imageDefault, "image/jpeg");
+            }
         }
     }
 }

@@ -12,6 +12,7 @@
 </p>
 <table class="table">
     <tr>
+        <th></th>
         <th>
             <span>Фамилия Имя</span>
         </th>
@@ -23,6 +24,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            <img class="icon" src="@Url.Action("Get", new { id = @item.Id })" />
+        </td>
         <td>
             <p class="data"><em>@item.Name</em></p>
         </td>

@@ -2,6 +2,7 @@
 using Epam.ListUsers.Entities;
 using System;
 using System.Collections.Generic;
+using System.Web;
 
 namespace Epam.ListUsers.BLL.Logic
 {
@@ -37,6 +38,16 @@ namespace Epam.ListUsers.BLL.Logic
         public List<User> GetAllUsersWithAward(Award award)
         {
             return _awards.GetAllUsersWithAward(award);
+        }
+
+        public void SetImageOfAward(Guid id, HttpPostedFileBase file)
+        {
+            _awards.SetImage(id, file);
+        }
+
+        public byte[] GetImageOfAward(Guid id)
+        {
+            return _awards.GetImage(id);
         }
     }
 }

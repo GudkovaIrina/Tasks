@@ -12,20 +12,25 @@
 </p>
 <table class="table">
     <tr>
+        <th></th>
         <th>
             <span>Название награды</span>
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
+        <td>
+            <img class="icon" src="@Url.Action("Get", new { id = @item.Id })" />
+        </td>
         <td>
             <p class="data"><em>@item.Title</em></p>
         </td>
         <td>
-            @Html.ActionLink("Редактировать", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Посмотреть", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Посмотреть", "Details", new { id = item.Id }) |
             <a class="delete" data-id="@item.Id" data-message="Вы уверены что хотите удалить награду @item.Title?">Удалить</a>
         </td>
     </tr>

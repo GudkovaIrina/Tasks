@@ -2,13 +2,18 @@
 using Epam.ListUsers.Entities;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Web;
 
 namespace Epam.ListUsers.DAL.XMLFiles
 {
     public class UsersDao : IUsersDao
     {
         private DataCache _dataCache;
+        private string PuthToImagesForUsers = ConfigurationManager.AppSettings["PathForImageOfUsers"];
+        private string PuthToDefaultImageForUsers = ConfigurationManager.AppSettings["PathForDefaultImageOfUsers"];
 
         public UsersDao()
         {
@@ -138,6 +143,22 @@ namespace Epam.ListUsers.DAL.XMLFiles
                 throw new ArgumentException("Such user or award is not exist!");
             }
             return result;
+        }
+
+        public void SetImage(Guid id, HttpPostedFileBase file) 
+        {
+            string fileName = PuthToImagesForUsers + id.ToString();
+            file.SaveAs(fileName);
+        }
+
+        public byte[] GetImage(Guid id)
+        {
+            string fileName = PuthToImagesForUsers + id.ToString();
+            if (File.Exists(fileName))
+            {
+                return File.ReadAllBytes(fileName);
+            }
+            return File.ReadAllBytes(PuthToDefaultImageForUsers);
         }
 
         private void GetAwardsOfUser(User user)

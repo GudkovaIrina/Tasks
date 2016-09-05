@@ -1,6 +1,7 @@
 ﻿using Epam.ListUsers.Entities;
 using System;
 using System.Collections.Generic;
+using System.Web;
 
 namespace Epam.ListUsers.DAL.Abstract
 {
@@ -19,5 +20,9 @@ namespace Epam.ListUsers.DAL.Abstract
         bool ToAward(User user, Award award);
 
         bool ReAward(User user, Award award);
+
+        void SetImage(Guid id, HttpPostedFileBase file);
+
+        byte[] GetImage(Guid id);
     }
 }

@@ -1,13 +1,18 @@
 ﻿using Epam.ListUsers.Entities;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Web;
 
 namespace Epam.ListUsers.DAL.XMLFiles
 {
     public class AwardsDao
     {
         private DataCache _dataCache;
+        private string PuthToImagesForAwards = ConfigurationManager.AppSettings["PathForImageOfAwards"];
+        private string PuthToDefaultImageForAwards = ConfigurationManager.AppSettings["PathForDefaultImageOfAwards"];
 
         public AwardsDao()
         {
@@ -101,6 +106,22 @@ namespace Epam.ListUsers.DAL.XMLFiles
             }
 
             return usersWithAward;
+        }
+
+        public void SetImage(Guid id, HttpPostedFileBase file)
+        {
+            string fileName = PuthToImagesForAwards + id.ToString();
+            file.SaveAs(fileName);
+        }
+
+        public byte[] GetImage(Guid id)
+        {
+            string fileName = PuthToImagesForAwards + id.ToString();
+            if (File.Exists(fileName))
+            {
+                return File.ReadAllBytes(fileName);
+            }
+            return File.ReadAllBytes(PuthToDefaultImageForAwards);
         }
     }
 }

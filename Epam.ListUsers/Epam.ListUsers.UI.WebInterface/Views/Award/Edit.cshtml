@@ -6,7 +6,7 @@
 
 <h2>Редактирование награды</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Award", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
@@ -15,6 +15,14 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.Label("Изображение", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <img class="show-image" src="@Url.Action("Get", new { id = @Model.Id })" />
+                <input class="image" type="file" name="uploadedFile" />
+            </div>
+        </div>
 
         <div class="form-group">
             @Html.Label("Название награды", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -37,5 +45,6 @@
 </div>
 @section scripts{
     <script src="~/Scripts/jquery.validate.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>    
+    <script src="~/Scripts/UpdateImage.js"></script>
 }

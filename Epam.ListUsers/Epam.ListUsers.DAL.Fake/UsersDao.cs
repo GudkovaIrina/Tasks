@@ -3,6 +3,7 @@ using Epam.ListUsers.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 
 namespace Epam.ListUsers.DAL.Fake
 {
@@ -71,6 +72,17 @@ namespace Epam.ListUsers.DAL.Fake
         }
 
         public bool ReAward(User user, Award award)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void SetImage(Guid id, HttpPostedFileBase file)
+        {
+            throw new NotImplementedException();
+        }
+
+        public byte[] GetImage(Guid id)
         {
             throw new NotImplementedException();
         }

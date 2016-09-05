@@ -10,6 +10,15 @@
     <h4>Награда</h4>
     <hr />
     <dl class="dl-horizontal">
+
+        <dt>
+            <span>Изображение</span>
+        </dt>
+
+        <dd>
+            <img src="@Url.Action("Get", "Award", new { id = @Model.Id })" />
+        </dd>
+
         <dt>
             <span>Название награды</span>
         </dt>

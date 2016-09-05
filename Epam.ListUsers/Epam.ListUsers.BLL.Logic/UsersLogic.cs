@@ -3,6 +3,7 @@ using Epam.ListUsers.DAL.XMLFiles;
 using Epam.ListUsers.Entities;
 using System;
 using System.Collections.Generic;
+using System.Web;
 
 namespace Epam.ListUsers.BLL.Logic
 {
@@ -56,6 +57,16 @@ namespace Epam.ListUsers.BLL.Logic
         public bool ReAward(User user, Award award)
         {
             return _users.ReAward(user, award);
+        }
+
+        public void SetImageOfUser(Guid id, HttpPostedFileBase file)
+        {
+            _users.SetImage(id, file);
+        }
+
+        public byte[] GetImageOfUser(Guid id)
+        {
+            return _users.GetImage(id);
         }
     }
 }

@@ -7,12 +7,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.IO;
+using System.Configuration;
 
 namespace Epam.ListUsers.UI.WebInterface.Controllers
 {
     public class UserController : Controller
     {
         private UsersLogic _logic = new UsersLogic();
+        private string PuthToDefaultImageForUsers = ConfigurationManager.AppSettings["PathForDefaultImageOfUsers"];
 
         // GET: User
         public ActionResult Index()
@@ -36,7 +39,8 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
 
         // POST: User/Create
         [HttpPost]
-        public ActionResult Create(UserModelForCreate model)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(UserModelForCreate model, HttpPostedFileBase uploadedFile)
         {
             if (ModelState.IsValid)
             {
@@ -46,6 +50,11 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
                     model.Id = Guid.NewGuid();
                     User user = Converters.ToUserForLogic(model);
                     _logic.AddUser(user);
+                    if (uploadedFile != null)
+                    {
+                        _logic.SetImageOfUser(model.Id, uploadedFile);
+                    }
+                    
                     return RedirectToAction("Index");
                 }
                 catch
@@ -70,7 +79,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
 
         // POST: User/Edit/5
         [HttpPost]
-        public ActionResult Edit(UserModelForEdit model)
+        public ActionResult Edit(UserModelForEdit model, HttpPostedFileBase uploadedFile)
         {
             if (ModelState.IsValid)
             {
@@ -79,6 +88,10 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
                     // TODO: Add update logic here
                     var user = Converters.ToUserForLogic(model);
                     _logic.EditUser(user);
+                    if (uploadedFile != null)
+                    {
+                        _logic.SetImageOfUser(model.Id, uploadedFile);
+                    }
                     return RedirectToAction("Index");
                 }
                 catch
@@ -150,6 +163,19 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
                 return View();
             }
             return RedirectToAction("Edit", new { id = idUser });
+        }
+
+        public ActionResult Get(Guid? id)
+        {
+            if (id.HasValue)
+	        {
+                return File(_logic.GetImageOfUser(id.Value), "image/jpeg");
+	        }
+            else
+            {
+                var imageDefault = System.IO.File.ReadAllBytes(PuthToDefaultImageForUsers);
+                return File(imageDefault, "image/jpeg");
+            }
         }
     }
 }

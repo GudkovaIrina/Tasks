@@ -27,3 +27,13 @@ textarea {
 .dl-horizontal dd {
     margin-left: 380px !important;
 }
+
+img {
+    height:120px !important; 
+    width:100px !important;
+}
+
+.icon {
+    height:24px !important; 
+    width:20px !important;
+}
