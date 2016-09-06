@@ -20,8 +20,8 @@
         <div class="form-group">
             @Html.Label("Фотография", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <img class="show-image" src="@Url.Action("Get", new { id = @Model.Id })" />
-                <input class="image" type="file" name="uploadedFile" />
+                <img id="show-image" src="@Url.Action("Get", new { id = @Model.Id })" />
+                <input id="image" type="file" name="uploadedFile" />
             </div>
         </div>
 
@@ -88,6 +88,6 @@
 @section scripts{
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-    <script src="~/Scripts/ControlModalWindow.js"></script>
-<script src="~/Scripts/UpdateImage.js"></script>
+    <script src="~/Scripts/APP/ControlModalWindow.js"></script>
+    <script src="~/Scripts/APP/UpdateImage.js"></script>
 }

@@ -87,6 +87,11 @@ namespace Epam.ListUsers.DAL.XMLFiles
                     _dataCache.PutRelations(relations);
                 }
                 _dataCache.PutUsers(users);
+                string fileName = PuthToImagesForUsers + user.Id.ToString();
+                if (File.Exists(fileName))
+                {
+                    File.Delete(fileName);
+                }
             }
 
             return result;
