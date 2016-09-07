@@ -18,6 +18,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         private string PuthToDefaultImageForAwards = ConfigurationManager.AppSettings["PathForDefaultImageOfAwards"];
         
         // GET: Award
+        [Authorize(Roles="admin")]
         public ActionResult Index()
         {
             var model = _logic.GetAllAwards().Select(a => Converters.ToAwardModel(a));
@@ -25,6 +26,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
         // GET: Award/Details/5
+        [Authorize(Roles = "admin")]
         public ActionResult Details(Guid id)
         {
             var award = _logic.GetAwardById(id);
@@ -34,6 +36,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
         // GET: Award/Create
+        [Authorize(Roles="admin")]
         public ActionResult Create()
         {
             return View();
@@ -41,6 +44,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
 
         // POST: Award/Create
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public ActionResult Create(AwardModel model, HttpPostedFileBase uploadedFile)
         {
             if (ModelState.IsValid)
@@ -70,6 +74,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
         // GET: Award/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(Guid id)
         {
 
@@ -80,6 +85,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
 
         // POST: Award/Edit/5
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(AwardModel model, HttpPostedFileBase uploadedFile)
         {
             if (ModelState.IsValid)
@@ -108,6 +114,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
         // GET: Award/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(Guid id)
         {
             var award = _logic.GetAwardById(id);

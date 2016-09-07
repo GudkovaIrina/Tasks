@@ -6,10 +6,13 @@
 }
 
 <h2>Пользователи</h2>
+@if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+{
+    <p>
+        @Html.ActionLink("Создать нового пользователя", "Create")
+    </p>
+}
 
-<p>
-    @Html.ActionLink("Создать нового пользователя", "Create")
-</p>
 <table class="table">
     <tr>
         <th></th>
@@ -21,8 +24,8 @@
         </th>
         <th></th>
     </tr>
-
-@foreach (var item in Model) {
+    
+    @foreach (var item in Model) {
     <tr>
         <td>
             <img class="icon" src="@Url.Action("Get", new { id = @item.Id })" />
@@ -33,22 +36,35 @@
         <td>
             <p class="data"><em>@item.DateOfBirth</em></p>
         </td>
+        
         <td>
-            @Html.ActionLink("Редактировать", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Посмотреть", "Details", new { id=item.Id }) |
+    @if (User.Identity.IsAuthenticated && User.IsInRole("user"))
+            {
+        @Html.ActionLink("Посмотреть", "Details", new { id = item.Id })
+            }
+    @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+	        {
+            <span>|</span>
+            @Html.ActionLink("Редактировать", "Edit", new { id = item.Id })
+            <span>|</span>
             <a class="delete" data-id="@item.Id" data-message="Вы уверены что хотите удалить пользователя @item.Name?">Удалить</a>
-        </td>
+            }
+
+    </td>
     </tr>
-}
+    }
+    
 
 </table>
 <form name="id" action="User/Delete" method="post">
     <input class="hidden" name="id">
 </form>
+
+
 @Html.ActionLink("На главную страницу", "Index", "Home", null, new { @class = "btn btn-default" })
 
-@Html.Partial("ModalWindow")
-@section scripts{
-    <script src="~/Scripts/APP/ControlModalWindow.js"></script>
-}
+        @*@Html.Partial("ModalWindow")
+            @section scripts{
+                <script src="~/Scripts/APP/ControlModalWindow.js"></script>
+            }*@
 

@@ -1,0 +1,57 @@
+﻿@model Epam.ListUsers.UI.WebInterface.Models.LoginModel
+
+@{
+    ViewBag.Title = "Вход в систему";
+    string returnUrl = ViewBag.ReturnUrl;
+}
+
+<h2>Авторизация</h2>
+
+@using(Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    
+    if (!string.IsNullOrWhiteSpace(returnUrl))
+    {
+        @Html.Hidden("returnUrl", returnUrl)
+    }
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.Label("Имя пользователя", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(m => m.UserName, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Пароль", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(m => m.Password, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Запомнить", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.CheckBoxFor(m => m.ToMemorize)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Войти" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+        }
+
+<div>
+    @Html.ActionLink("Зарегистрироваться", "ToRegister", new { returnUrl = @ViewBag.ReturnUrl})
+</div>
+
+<div>
+    @Html.ActionLink("Назад к списку", "Index","User")
+</div>
+
+

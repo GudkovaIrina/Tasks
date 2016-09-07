@@ -4,6 +4,7 @@ using Epam.ListUsers.UI.WebInterface.Models;
 using Epam.ListUsers.Entities;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -25,6 +26,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
         // GET: User/Details/5
+        [Authorize(Roles = "user")]    
         public ActionResult Details(Guid id)
         {
             var model = Converters.ToUserModelForDetails(_logic.GetUserById(id));
@@ -32,14 +34,17 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
         // GET: User/Create
+        [Authorize(Roles="admin")]
         public ActionResult Create()
         {
             return View();
         }
 
         // POST: User/Create
+
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public ActionResult Create(UserModelForCreate model, HttpPostedFileBase uploadedFile)
         {
             if (ModelState.IsValid)
@@ -69,6 +74,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
         // GET: User/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(Guid id)
         {
             User user = _logic.GetUserById(id);
@@ -79,6 +85,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
 
         // POST: User/Edit/5
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(UserModelForEdit model, HttpPostedFileBase uploadedFile)
         {
             if (ModelState.IsValid)
@@ -105,6 +112,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
             }
         }
 
+        [Authorize(Roles = "admin")]
         public ActionResult DetailsAward(Guid idUser, Guid idAward)
         {
             var award = _logic.GetAwardById(idAward);
@@ -114,6 +122,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
          //GET: User/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult ReAward(Guid idUser, Guid idAward)
         {
             var award = _logic.GetAwardById(idAward);
@@ -123,6 +132,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
         // GET: User/Delete/5
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(Guid id)
         {
             if (ModelState.IsValid) 
@@ -141,7 +151,8 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
             }
             return View();
         }
-
+        
+        [Authorize(Roles = "admin")]
         public ActionResult ToAward(Guid idUser)
         {
             var model = new AwardsModelForToAward();
@@ -150,7 +161,8 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
             return View(model);
         }
 
-        public ActionResult ToAwardThisAward(Guid idUser, Guid idAward)
+        [Authorize(Roles = "admin")]
+        public ActionResult ToAward(Guid idUser, Guid idAward)
         {
             if (ModelState.IsValid)
             {
@@ -169,6 +181,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         {
             if (id.HasValue)
 	        {
+                
                 return File(_logic.GetImageOfUser(id.Value), "image/jpeg");
 	        }
             else

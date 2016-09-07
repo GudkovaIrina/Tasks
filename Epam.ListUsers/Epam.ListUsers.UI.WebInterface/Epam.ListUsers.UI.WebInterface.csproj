@@ -90,7 +90,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\ControlModalWindow.js" />
+    <Content Include="Scripts\APP\ControlModalWindow.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -99,7 +99,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\UpdateImage.js" />
+    <Content Include="Scripts\APP\UpdateImage.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\User\Index.cshtml" />
@@ -113,9 +113,13 @@
     <Content Include="Views\Award\Create.cshtml" />
     <Content Include="Views\Award\Edit.cshtml" />
     <Content Include="Views\Shared\ModalWindow.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\ToRegister.cshtml" />
+    <Content Include="Views\Account\UserInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AwardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -126,6 +130,9 @@
     <Compile Include="Models\AwardModel.cs" />
     <Compile Include="Models\AwardModelForDetailsAndReAward.cs" />
     <Compile Include="Models\AwardsModelForToAward.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\MyRoleProvider.cs" />
+    <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\UserModelForCreate.cs" />
     <Compile Include="Models\UserModelForDetails.cs" />
     <Compile Include="Models\UserModelForEdit.cs" />

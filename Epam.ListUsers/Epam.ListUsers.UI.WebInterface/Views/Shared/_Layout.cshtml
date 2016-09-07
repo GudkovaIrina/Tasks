@@ -17,7 +17,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Пользователи и награды", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @*@Html.ActionLink("Пользователи и награды", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                @Html.Action("UserInfo","Account")
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -33,9 +34,11 @@
             <p>&copy; @DateTime.Now.Year - Users With Awards Application</p>
         </footer>
     </div>
+    @Html.Partial("ModalWindow")
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/APP/ControlModalWindow.js"></script>
     @RenderSection("scripts",required: false)
 </body>
 </html>

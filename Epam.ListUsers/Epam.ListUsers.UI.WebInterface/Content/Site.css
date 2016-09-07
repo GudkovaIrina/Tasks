@@ -37,3 +37,8 @@ img {
     height:24px !important; 
     width:20px !important;
 }
+
+.user-info{
+    float:right !important;
+    display:inline-block;
+}
