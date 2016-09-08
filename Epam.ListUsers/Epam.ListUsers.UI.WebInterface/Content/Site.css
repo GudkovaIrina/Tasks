@@ -28,17 +28,18 @@ textarea {
     margin-left: 380px !important;
 }
 
-img {
-    height:120px !important; 
-    width:100px !important;
+.picture {
+    max-height:120px; 
 }
 
 .icon {
-    height:24px !important; 
-    width:20px !important;
+    max-height:24px;
 }
 
-.user-info{
-    float:right !important;
-    display:inline-block;
+.withdrawal-roles{
+    float:right;
+}
+
+.administration{
+    max-width: 500px;
 }

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Epam.ListUsers.UI.WebInterface.Models.RolesOfUserModel>
+
+@{
+    ViewBag.Title = "Администрирование";
+    List<string> roles = ViewBag.Roles;
+}
+<table class="table administration">
+    <tr class="table-hover">
+        <th>
+            <h4>Пользователь</h4>
+        </th>
+        <th>
+            <h4>Права</h4>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <label>@item.UserName</label>
+            </td>
+            <td>
+                @foreach (var role in item.Roles)
+                {
+                    <div>
+                        @role
+                        @Html.ActionLink("Снять право", "WithdrawalRoles", new { userName = item.UserName, role = role }, new { @class = "withdrawal-roles" })
+                    </div>
+                }
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="userName" value=@item.UserName />
+                    <select name="roleForAdd" class="dropdown">
+                        @foreach (var role in roles)
+                        {
+                            <option>
+                                @role
+                            </option>
+                        }
+                    </select>
+                    <input type="submit" class="btn btn-default" value="Добавить" />
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.ActionLink("На главную страницу", "Index", "Home", null, new { @class = "btn btn-default" })

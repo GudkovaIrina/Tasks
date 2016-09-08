@@ -17,11 +17,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @*@Html.ActionLink("Пользователи и награды", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
-                @Html.Action("UserInfo","Account")
+                @Html.ActionLink("Пользователи и награды", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @if(User.Identity.IsAuthenticated && User.IsInRole("admin"))
+                { 
+                    <p class="navbar-brand">@Html.ActionLink("Администрирование", "Administration", "Account")</p>
+                }
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-brand">
+                        @Html.Action("UserInfo", "Account")
+                    </li>
                 </ul>
             </div>
         </div>
@@ -39,6 +45,6 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/APP/ControlModalWindow.js"></script>
-    @RenderSection("scripts",required: false)
+    @RenderSection("scripts", required: false)
 </body>
 </html>

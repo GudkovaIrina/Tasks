@@ -12,10 +12,14 @@ namespace Epam.ListUsers.UI.WebInterface.Models
     public class LoginModel
     {
         private static string PathForAuthenticationUsers = ConfigurationManager.AppSettings["PathForAuthenticationUsers"];
-        
+
+        [Required(ErrorMessage = "Поле обязательно для ввода")]
+        [RegularExpression(@"[\w]{3,15}", ErrorMessage = "Имя пользователя может содержать от 3 до 15 букв, цифр или знак подчеркивания")]
         public string UserName { get; set; }
 
         [DataType(DataType.Password)]
+        [Required(ErrorMessage = "Поле обязательно для ввода")]
+        [RegularExpression(@"[\w]{3,15}", ErrorMessage = "Пароль может содержать от 3 до 15 букв, цифр или знак подчеркивания")]
         public string Password { get; set; }
 
         public bool ToMemorize { get; set; }

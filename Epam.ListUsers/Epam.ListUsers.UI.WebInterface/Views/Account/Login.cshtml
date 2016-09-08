@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Вход в систему";
     string returnUrl = ViewBag.ReturnUrl;
+    string errorMessage = ViewBag.ErrorMessage;
 }
 
 <h2>Авторизация</h2>
@@ -15,12 +16,19 @@
     {
         @Html.Hidden("returnUrl", returnUrl)
     }
+    
+    if (errorMessage != null)
+    {
+        <span class="text-danger">@errorMessage</span>
+    }
 
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-horizontal">
         <div class="form-group">
             @Html.Label("Имя пользователя", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(m => m.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -28,6 +36,7 @@
             @Html.Label("Пароль", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(m => m.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -53,5 +62,10 @@
 <div>
     @Html.ActionLink("Назад к списку", "Index","User")
 </div>
+
+@section scripts{
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+}
 
 

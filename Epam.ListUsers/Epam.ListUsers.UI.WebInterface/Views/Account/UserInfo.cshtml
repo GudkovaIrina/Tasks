@@ -1,12 +1,12 @@
-﻿<div class="navbar-brand user-info">
-    @if (User.Identity != null && User.Identity.IsAuthenticated)
-    {
-        <span>Привет, @User.Identity.Name!</span>
-        <a class="logout">Выйти</a>
-    }
-    else
-    {
-        <span>Привет, гость!</span>
-        @Html.ActionLink("Войти", "Login", "Account")
-    }
-</div>
+﻿    <div>
+        @if (User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            <span>Привет, @User.Identity.Name!</span>
+            <a class="logout">Выйти</a>
+        }
+        else
+        {
+            <span>Привет, гость!</span>
+            @Html.ActionLink("Войти", "Login", "Account", new { returnUrl = HttpContext.Current.Request.Url.LocalPath }, null)
+        }
+    </div>

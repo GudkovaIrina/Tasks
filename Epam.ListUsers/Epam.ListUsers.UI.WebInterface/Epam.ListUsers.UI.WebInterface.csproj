@@ -116,6 +116,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\ToRegister.cshtml" />
     <Content Include="Views\Account\UserInfo.cshtml" />
+    <Content Include="Views\Account\Administration.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MyRoleProvider.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\RolesOfUserModel.cs" />
     <Compile Include="Models\UserModelForCreate.cs" />
     <Compile Include="Models\UserModelForDetails.cs" />
     <Compile Include="Models\UserModelForEdit.cs" />

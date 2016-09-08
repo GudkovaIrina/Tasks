@@ -20,7 +20,7 @@
         <div class="form-group">
             @Html.Label("Фотография", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <img id="show-image" src="@Url.Action("Get", new { id = @Model.Id })" />
+                <img id="show-image" class="picture" src="@Url.Action("Get", new { id = @Model.Id })" />
                 <input id="image" type="file" name="uploadedFile" />
             </div>
         </div>
