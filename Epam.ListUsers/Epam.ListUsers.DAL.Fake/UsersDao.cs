@@ -86,5 +86,11 @@ namespace Epam.ListUsers.DAL.Fake
         {
             throw new NotImplementedException();
         }
+
+
+        public bool EditImage(Guid id, HttpPostedFileBase file)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

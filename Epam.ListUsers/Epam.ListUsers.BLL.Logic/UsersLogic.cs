@@ -1,5 +1,5 @@
 ﻿using Epam.ListUsers.DAL.Abstract;
-using Epam.ListUsers.DAL.XMLFiles;
+using Epam.ListUsers.DAL.SQLServer;
 using Epam.ListUsers.Entities;
 using System;
 using System.Collections.Generic;
@@ -67,6 +67,11 @@ namespace Epam.ListUsers.BLL.Logic
         public byte[] GetImageOfUser(Guid id)
         {
             return _users.GetImage(id);
+        }
+
+        public bool EditImageOfUser(Guid id, HttpPostedFileBase file)
+        {
+            return _users.EditImage(id, file);
         }
     }
 }

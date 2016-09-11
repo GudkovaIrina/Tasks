@@ -53,6 +53,10 @@
       <Project>{067eb20f-2c17-442b-8d1b-4a47ca2981fc}</Project>
       <Name>Epam.ListUsers.DAL.Fake</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Epam.ListUsers.DAL.SQLServer\Epam.ListUsers.DAL.SQLServer.csproj">
+      <Project>{01d9abdf-1d8f-4b7c-91a6-55eb1fe9a271}</Project>
+      <Name>Epam.ListUsers.DAL.SQLServer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Epam.ListUsers.DAL.XMLFiles\Epam.ListUsers.DAL.XMLFiles.csproj">
       <Project>{7ddea2e1-b70b-4b42-958c-5fbd44fa58fe}</Project>
       <Name>Epam.ListUsers.DAL.XMLFiles</Name>

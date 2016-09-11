@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.ListUsers.DAL.XMLFiles
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.ListUsers.UI.WebInterface", "Epam.ListUsers.UI.WebInterface\Epam.ListUsers.UI.WebInterface.csproj", "{1A71C05A-E41B-4464-AFC6-EEEDFA31E7E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.ListUsers.DAL.SQLServer", "Epam.ListUsers.DAL.SQLServer\Epam.ListUsers.DAL.SQLServer.csproj", "{01D9ABDF-1D8F-4B7C-91A6-55EB1FE9A271}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{1A71C05A-E41B-4464-AFC6-EEEDFA31E7E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A71C05A-E41B-4464-AFC6-EEEDFA31E7E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A71C05A-E41B-4464-AFC6-EEEDFA31E7E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D9ABDF-1D8F-4B7C-91A6-55EB1FE9A271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D9ABDF-1D8F-4B7C-91A6-55EB1FE9A271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D9ABDF-1D8F-4B7C-91A6-55EB1FE9A271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D9ABDF-1D8F-4B7C-91A6-55EB1FE9A271}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +77,6 @@ Global
 		{17BAA38C-15C5-45A2-BF1F-7DD730E3A787} = {AF8D9D57-4640-4267-88A2-98D51199335E}
 		{7DDEA2E1-B70B-4B42-958C-5FBD44FA58FE} = {970F8838-D7AF-4D80-B077-29900EE729C0}
 		{1A71C05A-E41B-4464-AFC6-EEEDFA31E7E0} = {4DA01638-F357-4B3E-802B-D92668EC89B8}
+		{01D9ABDF-1D8F-4B7C-91A6-55EB1FE9A271} = {970F8838-D7AF-4D80-B077-29900EE729C0}
 	EndGlobalSection
 EndGlobal

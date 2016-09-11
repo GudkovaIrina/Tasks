@@ -10,5 +10,5 @@ D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.Entities.pdb
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.DAL.Abstract.pdb
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\obj\Debug\Epam.ListUsers.UI.ConsoleInterface.csprojResolveAssemblyReference.cache
-D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.DAL.XMLFiles.dll
-D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.DAL.XMLFiles.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.DAL.SQLServer.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.ConsoleInterface\bin\Debug\Epam.ListUsers.DAL.SQLServer.pdb

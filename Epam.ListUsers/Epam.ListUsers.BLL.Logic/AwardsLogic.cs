@@ -1,4 +1,4 @@
-﻿using Epam.ListUsers.DAL.XMLFiles;
+﻿using Epam.ListUsers.DAL.SQLServer;
 using Epam.ListUsers.Entities;
 using System;
 using System.Collections.Generic;
@@ -48,6 +48,11 @@ namespace Epam.ListUsers.BLL.Logic
         public byte[] GetImageOfAward(Guid id)
         {
             return _awards.GetImage(id);
+        }
+
+        public bool EditImageOfAward(Guid id, HttpPostedFileBase file)
+        {
+            return _awards.EditImage(id, file);
         }
     }
 }

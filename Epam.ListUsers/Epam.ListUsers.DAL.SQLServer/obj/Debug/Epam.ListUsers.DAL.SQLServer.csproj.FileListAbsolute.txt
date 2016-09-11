@@ -1,0 +1,9 @@
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.SQLServer\bin\Debug\Epam.ListUsers.DAL.SQLServer.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.SQLServer\bin\Debug\Epam.ListUsers.DAL.SQLServer.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.SQLServer\bin\Debug\Epam.ListUsers.DAL.Abstract.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.SQLServer\bin\Debug\Epam.ListUsers.Entities.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.SQLServer\bin\Debug\Epam.ListUsers.DAL.Abstract.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.SQLServer\bin\Debug\Epam.ListUsers.Entities.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.SQLServer\obj\Debug\Epam.ListUsers.DAL.SQLServer.csprojResolveAssemblyReference.cache
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.SQLServer\obj\Debug\Epam.ListUsers.DAL.SQLServer.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.DAL.SQLServer\obj\Debug\Epam.ListUsers.DAL.SQLServer.pdb

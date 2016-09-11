@@ -97,7 +97,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
                     _logic.EditUser(user);
                     if (uploadedFile != null)
                     {
-                        _logic.SetImageOfUser(model.Id, uploadedFile);
+                        _logic.EditImageOfUser(model.Id, uploadedFile);
                     }
                     return RedirectToAction("Index");
                 }
@@ -162,7 +162,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
         }
 
         [Authorize(Roles = "admin")]
-        public ActionResult ToAward(Guid idUser, Guid idAward)
+        public ActionResult ToAwardThisUser(Guid idUser, Guid idAward)
         {
             if (ModelState.IsValid)
             {

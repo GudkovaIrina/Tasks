@@ -40,14 +40,6 @@ namespace Epam.ListUsers.DAL.XMLFiles
             bool result = users.TryGetValue(id, out user);
             if (result)
             {
-                //var relations = _dataCache.GetRelations();
-                //Relation relation;
-                //result = relations.TryGetValue(user.Id, out relation);
-                //if (result)
-                //{
-                //    var awards = _dataCache.GetAwards();
-                //    user.Awards = relation.IdOfAwards.Select(ID => awards[ID]).ToList();
-                //}
                 GetAwardsOfUser(user);
                 return user;
             }
@@ -176,6 +168,13 @@ namespace Epam.ListUsers.DAL.XMLFiles
                 var awards = _dataCache.GetAwards();
                 user.Awards = relation.IdOfAwards.Select(ID => awards[ID]).ToList();
             }
+        }
+
+
+        public bool EditImage(Guid id, HttpPostedFileBase file)
+        {
+            this.SetImage(id, file);
+            return true;
         }
     }
 }

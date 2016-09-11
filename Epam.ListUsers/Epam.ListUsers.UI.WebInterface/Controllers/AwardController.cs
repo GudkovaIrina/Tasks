@@ -97,7 +97,7 @@ namespace Epam.ListUsers.UI.WebInterface.Controllers
                     _logic.EditAward(award);
                     if (uploadedFile != null)
                     {
-                        _logic.SetImageOfAward(model.Id, uploadedFile);
+                        _logic.EditImageOfAward(model.Id, uploadedFile);
                     }
                     
                     return RedirectToAction("Index");

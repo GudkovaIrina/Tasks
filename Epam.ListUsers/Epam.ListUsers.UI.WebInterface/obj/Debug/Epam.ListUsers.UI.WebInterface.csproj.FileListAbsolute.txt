@@ -10,7 +10,6 @@ D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\System.Web.Web
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\System.Web.Webpages.dll
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\System.Web.Webpages.Razor.dll
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\Epam.ListUsers.DAL.Abstract.dll
-D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\Epam.ListUsers.DAL.XMLFiles.dll
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\Epam.ListUsers.BLL.Logic.pdb
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\Epam.ListUsers.Entities.pdb
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\System.Web.Razor.xml
@@ -20,7 +19,8 @@ D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\System.Web.Web
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\System.Web.Helpers.xml
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\System.Web.Mvc.xml
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\Epam.ListUsers.DAL.Abstract.pdb
-D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\Epam.ListUsers.DAL.XMLFiles.pdb
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\obj\Debug\Epam.ListUsers.UI.WebInterface.csprojResolveAssemblyReference.cache
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\obj\Debug\Epam.ListUsers.UI.WebInterface.dll
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\obj\Debug\Epam.ListUsers.UI.WebInterface.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\Epam.ListUsers.DAL.SQLServer.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.UI.WebInterface\bin\Epam.ListUsers.DAL.SQLServer.pdb

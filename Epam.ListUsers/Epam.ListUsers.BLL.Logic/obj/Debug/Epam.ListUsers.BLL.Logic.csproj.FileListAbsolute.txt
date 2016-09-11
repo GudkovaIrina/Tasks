@@ -11,3 +11,5 @@ D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\obj\Debug\Epam.ListUsers
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\obj\Debug\Epam.ListUsers.BLL.Logic.pdb
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.DAL.XMLFiles.dll
 D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.DAL.XMLFiles.pdb
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.DAL.SQLServer.dll
+D:\epam\Ira\new\Epam.ListUsers\Epam.ListUsers.BLL.Logic\bin\Debug\Epam.ListUsers.DAL.SQLServer.pdb

@@ -24,5 +24,7 @@ namespace Epam.ListUsers.DAL.Abstract
         void SetImage(Guid id, HttpPostedFileBase file);
 
         byte[] GetImage(Guid id);
+
+        bool EditImage(Guid id, HttpPostedFileBase file);
     }
 }
