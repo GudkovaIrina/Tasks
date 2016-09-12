@@ -23,7 +23,10 @@ namespace Epam.ListUsers.DAL.SQLServer
         {
             using (var connect = new SqlConnection(connectionString))
             {
-                var command = new SqlCommand("INSERT INTO dbo.Awards ([Id], [Title]) VALUES (@Id, @Title)", connect);
+                var command = new SqlCommand("dbo.AddAward", connect) 
+                {
+                    CommandType = System.Data.CommandType.StoredProcedure
+                };
                 command.Parameters.Add(new SqlParameter("@Id", award.Id.ToString()));
                 command.Parameters.Add(new SqlParameter("@Title", award.Title));
 
@@ -96,7 +99,10 @@ namespace Epam.ListUsers.DAL.SQLServer
         {
             using (var connect = new SqlConnection(connectionString))
             {
-                var command = new SqlCommand("DELETE FROM dbo.Awards WHERE Id = @Id", connect);
+                var command = new SqlCommand("dbo.RemoveAward", connect)
+                {
+                    CommandType = System.Data.CommandType.StoredProcedure
+                };
                 command.Parameters.Add(new SqlParameter("@Id", award.Id.ToString()));
 
                 connect.Open();

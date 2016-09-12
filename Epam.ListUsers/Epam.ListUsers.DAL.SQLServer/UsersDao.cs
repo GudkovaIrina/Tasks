@@ -24,7 +24,10 @@ namespace Epam.ListUsers.DAL.SQLServer
         {
             using (var connect = new SqlConnection(connectionString))
             {
-                var command = new SqlCommand("INSERT INTO dbo.Users ([Id], [Name], [DateOfBirth]) VALUES (@Id, @Name, @DateOfBirth)", connect);
+                var command = new SqlCommand("dbo.AddUser", connect) 
+                {
+                    CommandType = System.Data.CommandType.StoredProcedure
+                };
                 command.Parameters.Add(new SqlParameter("@Id", user.Id.ToString()));
                 command.Parameters.Add(new SqlParameter("@Name", user.Name));
                 command.Parameters.Add(new SqlParameter("@DateOfBirth", user.DateOfBirth.Date));
@@ -41,48 +44,79 @@ namespace Epam.ListUsers.DAL.SQLServer
             User user = null;
             using(var connect = new SqlConnection(connectionString))
             {
-                var command = new SqlCommand("SELECT [Id], [Name], [DateOfBirth] FROM dbo.Users WHERE [Id]=@Id", connect);
+                var command = new SqlCommand("dbo.GetUserWithAwards", connect)
+                {
+                    CommandType = System.Data.CommandType.StoredProcedure
+                };
                 command.Parameters.Add(new SqlParameter("@Id", id.ToString()));
 
                 connect.Open();
                 var reader = command.ExecuteReader();
-                if (reader.Read())
+                while (reader.Read())
                 {
-                    user = new User(
-                        (string)reader["Name"],
-                        (DateTime)reader["DateOfBirth"])
-                        {
-                            Id = Guid.Parse((string)reader["Id"])
-                        };
+                    if (user == null)
+                    {
+                        user = new User(
+                           (string)reader["Name"],
+                           (DateTime)reader["DateOfBirth"])
+                           {
+                               Id = Guid.Parse((string)reader["Id"])
+                           };
+                        
+                    }
+                    if (!DBNull.Value.Equals(reader["Title"]))
+                    {
+                        user.Awards.Add(new Award((string)reader["Title"])
+                                                {
+                                                    Id = Guid.Parse((string)reader["IdAward"])
+                                                });
+                    };
                 }
-            }
-            if (user != null)
-            {
-                user.Awards = AwardsOfUser(id);
                 return user;
             }
+            
             throw new ArgumentException("User with such Id is not exist");
         }
 
         public List<User> GetAll()
         {
             List<User> users = new List<User>();
+            User user = null;
             using(var connect = new SqlConnection(connectionString))
             {
-                var command = new SqlCommand("SELECT [Id], [Name], [DateOfBirth] FROM dbo.Users", connect);
+                var command = new SqlCommand("dbo.GetAllUsersWithAwards", connect) 
+                {
+                    CommandType = System.Data.CommandType.StoredProcedure
+                };
 
                 connect.Open();
                 var reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    users.Add(new User(
-                        (string)reader["Name"],
-                        (DateTime)reader["DateOfBirth"])
+                    var IdUser = Guid.Parse((string)reader["Id"]);
+                    if (user == null || user.Id != IdUser)
+                    {
+                        if (user != null)
                         {
-                            Id = Guid.Parse((string)reader["Id"])
+                            users.Add(user);
+                        }
+                        user = new User((string)reader["Name"], (DateTime)reader["DateOfBirth"])
+                                    {
+                                        Id = IdUser
+                                    };
+
+                    }
+
+                    if (!DBNull.Value.Equals(reader["Title"]))
+                    {
+                        user.Awards.Add(new Award((string)reader["Title"])
+                        {
+                            Id = Guid.Parse((string)reader["IdAward"])
                         });
+                    }
                 }
+                users.Add(user);
             }
             return users;
         }
@@ -107,7 +141,10 @@ namespace Epam.ListUsers.DAL.SQLServer
         {
             using (var connect = new SqlConnection(connectionString))
             {
-                var command = new SqlCommand("DELETE FROM dbo.Users WHERE Id = @Id", connect);
+                var command = new SqlCommand("dbo.RemoveUser", connect) 
+                {
+                    CommandType = System.Data.CommandType.StoredProcedure
+                };
                 command.Parameters.Add(new SqlParameter("@Id", user.Id.ToString()));
 
                 connect.Open();
@@ -136,7 +173,7 @@ namespace Epam.ListUsers.DAL.SQLServer
         {
             using (var connect = new SqlConnection(connectionString))
             {
-                var command = new SqlCommand("DELETE FROM dbo.Relations WHERE IdUser = @IdUser, IdAward = @IdAward", connect);
+                var command = new SqlCommand("DELETE FROM dbo.Relations WHERE IdUser = @IdUser AND IdAward = @IdAward", connect);
                 command.Parameters.Add(new SqlParameter("@IdUser", user.Id.ToString()));
                 command.Parameters.Add(new SqlParameter("@IdAward", award.Id.ToString()));
 
